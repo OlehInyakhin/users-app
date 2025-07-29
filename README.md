@@ -32,7 +32,7 @@ This project includes a comprehensive ESLint setup that automatically detects an
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/users-app.git
+   git clone https://github.com/OlehInyakhin/users-app.git
    cd users-app
    ```
 
