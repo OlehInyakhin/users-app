@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import { Home, Users } from "lucide-react"
+import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
+import { Home, Users } from 'lucide-react'
 
 export function NotFound() {
   return (
@@ -12,11 +12,11 @@ export function NotFound() {
             Page Not Found
           </h2>
           <p className="text-muted-foreground max-w-md">
-            Sorry, we couldn't find the page you're looking for. 
-            The page might have been moved, deleted, or you entered the wrong URL.
+            Sorry, we couldn't find the page you're looking for. The page might
+            have been moved, deleted, or you entered the wrong URL.
           </p>
         </div>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild>
             <Link to="/about">

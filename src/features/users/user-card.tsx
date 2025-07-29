@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
-import { User, Mail, Phone, Globe } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Link } from 'react-router-dom'
+import { User, Mail, Phone, Globe } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -8,8 +8,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { type UserCardProps } from "@/types/user"
+} from '@/components/ui/card'
+import { type UserCardProps } from '@/types/user'
 
 export function UserCard({ user }: UserCardProps) {
   return (
@@ -21,11 +21,13 @@ export function UserCard({ user }: UserCardProps) {
           </div>
           <div className="flex-1 min-w-0">
             <CardTitle className="text-lg truncate">{user.name}</CardTitle>
-            <CardDescription className="truncate">@{user.username}</CardDescription>
+            <CardDescription className="truncate">
+              @{user.username}
+            </CardDescription>
           </div>
         </div>
       </CardHeader>
-      
+
       <CardContent className="flex-1 space-y-3">
         <div className="space-y-2">
           <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -41,7 +43,7 @@ export function UserCard({ user }: UserCardProps) {
             <span className="truncate">{user.website}</span>
           </div>
         </div>
-        
+
         <div className="pt-2">
           <p className="text-sm text-muted-foreground">
             <span className="font-medium">Company:</span> {user.company.name}
@@ -51,12 +53,10 @@ export function UserCard({ user }: UserCardProps) {
           </p>
         </div>
       </CardContent>
-      
+
       <CardFooter className="flex-shrink-0">
         <Button asChild className="w-full">
-          <Link to={`/users/${user.id}`}>
-            View Details
-          </Link>
+          <Link to={`/users/${user.id}`}>View Details</Link>
         </Button>
       </CardFooter>
     </Card>

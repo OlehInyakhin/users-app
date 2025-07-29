@@ -9,6 +9,7 @@ A modern web application for viewing and managing user information. The applicat
 - 🎨 **Tailwind CSS v4** - Modern utility-first CSS framework
 - 🧩 **shadcn/ui** - Beautiful and accessible UI components
 - 🔍 **ESLint** - Code linting with unused imports/variables detection
+- 💅 **Prettier** - Code formatting for consistent style
 - 🌙 **Dark/Light Theme** - Theme switching support
 - 📱 **Responsive Design** - Mobile-first approach
 
@@ -31,12 +32,14 @@ This project includes a comprehensive ESLint setup that automatically detects an
 ### Installation Steps
 
 1. Clone the repository
+
    ```bash
    git clone https://github.com/OlehInyakhin/users-app.git
    cd users-app
    ```
 
 2. Install dependencies
+
    ```bash
    npm install
    ```
@@ -54,6 +57,12 @@ npm run lint
 
 # Automatically fix linting errors (including unused imports)
 npm run lint:fix
+
+# Format code with Prettier
+npm run format
+
+# Check code formatting
+npm run format:check
 
 # Start development server
 npm run dev
@@ -84,8 +93,8 @@ VITE_API_BASE_URL=https://jsonplaceholder.typicode.com
 
 ### Available Environment Variables
 
-| Variable | Description | Default Value |
-|------------|----------|----------------------|
+| Variable            | Description  | Default Value                        |
+| ------------------- | ------------ | ------------------------------------ |
 | `VITE_API_BASE_URL` | Base API URL | https://jsonplaceholder.typicode.com |
 
 ## API and Data Structure
@@ -94,10 +103,10 @@ The application uses JSONPlaceholder API to retrieve user data.
 
 ### Endpoints
 
-| Endpoint | Method | Description | Parameters |
-|----------|-------|----------|----------|
-| `/users` | GET | Get a list of all users | - |
-| `/users/:id` | GET | Get a user by ID | `id`: User ID |
+| Endpoint     | Method | Description             | Parameters    |
+| ------------ | ------ | ----------------------- | ------------- |
+| `/users`     | GET    | Get a list of all users | -             |
+| `/users/:id` | GET    | Get a user by ID        | `id`: User ID |
 
 ### API Response Structure
 
@@ -131,10 +140,10 @@ interface User {
 
 ```typescript
 // Get all users
-const users = await userApi.getUsers();
+const users = await userApi.getUsers()
 
 // Get user by ID
-const user = await userApi.getUserById(1);
+const user = await userApi.getUserById(1)
 ```
 
 ## Project Structure

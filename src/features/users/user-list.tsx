@@ -1,7 +1,7 @@
-import { UserCard } from "./user-card"
-import { Skeleton } from "@/components/ui/skeleton"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { type UserListProps } from "@/types/user"
+import { UserCard } from './user-card'
+import { Skeleton } from '@/components/ui/skeleton'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
+import { type UserListProps } from '@/types/user'
 
 // Skeleton component for loading state
 function UserCardSkeleton() {
@@ -39,11 +39,18 @@ interface UserListWithLoadingProps extends UserListProps {
   error?: Error | null
 }
 
-export function UserList({ users, searchTerm, isLoading, error }: UserListWithLoadingProps) {
+export function UserList({
+  users,
+  searchTerm,
+  isLoading,
+  error,
+}: UserListWithLoadingProps) {
   if (error) {
     return (
       <div className="text-center py-12">
-        <p className="text-destructive text-lg font-medium">Error loading users</p>
+        <p className="text-destructive text-lg font-medium">
+          Error loading users
+        </p>
         <p className="text-muted-foreground mt-2">{error.message}</p>
       </div>
     )
@@ -84,7 +91,7 @@ export function UserList({ users, searchTerm, isLoading, error }: UserListWithLo
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {users.map((user) => (
+      {users.map(user => (
         <UserCard key={user.id} user={user} />
       ))}
     </div>

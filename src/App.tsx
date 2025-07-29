@@ -6,8 +6,6 @@ import { Users } from '@/pages/users'
 import { UserDetail } from '@/pages/user-detail'
 import { NotFound } from '@/pages/not-found'
 
-
-
 function App() {
   return (
     <AppProviders>

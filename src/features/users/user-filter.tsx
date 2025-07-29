@@ -1,6 +1,6 @@
-import { Search } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { type UserFilterProps } from "@/types/user"
+import { Search } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import { type UserFilterProps } from '@/types/user'
 
 export function UserFilter({ searchTerm, onSearchChange }: UserFilterProps) {
   return (
@@ -10,7 +10,7 @@ export function UserFilter({ searchTerm, onSearchChange }: UserFilterProps) {
         type="text"
         placeholder="Search by name or @username..."
         value={searchTerm}
-        onChange={(e) => onSearchChange(e.target.value)}
+        onChange={e => onSearchChange(e.target.value)}
         className="pl-10"
         aria-label="Search users"
       />

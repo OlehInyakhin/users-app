@@ -1,10 +1,10 @@
-import { useState } from "react"
-import { UserFilter } from "@/features/users/user-filter"
-import { UserList } from "@/features/users/user-list"
-import { useFilteredUsers } from "@/hooks/use-users"
+import { useState } from 'react'
+import { UserFilter } from '@/features/users/user-filter'
+import { UserList } from '@/features/users/user-list'
+import { useFilteredUsers } from '@/hooks/use-users'
 
 export function Users() {
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState('')
   const { data: users, isLoading, error } = useFilteredUsers(searchTerm)
 
   return (
@@ -20,10 +20,10 @@ export function Users() {
         </div>
         <UserFilter searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       </div>
-      
-      <UserList 
-        users={users} 
-        searchTerm={searchTerm} 
+
+      <UserList
+        users={users}
+        searchTerm={searchTerm}
         isLoading={isLoading}
         error={error}
       />

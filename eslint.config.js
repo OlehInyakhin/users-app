@@ -9,10 +9,7 @@ export default tseslint.config([
   { ignores: ['dist'] },
   {
     files: ['**/*.{ts,tsx}'],
-    extends: [
-      js.configs.recommended,
-      ...tseslint.configs.recommended,
-    ],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -32,26 +29,26 @@ export default tseslint.config([
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
-          'argsIgnorePattern': '^_',
-          'varsIgnorePattern': '^_',
-          'caughtErrorsIgnorePattern': '^_'
-        }
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
       ],
       'no-unused-vars': 'off', // Отключаем базовое правило в пользу TypeScript версии
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [
         'warn',
         {
-          'vars': 'all',
-          'varsIgnorePattern': '^_',
-          'args': 'after-used',
-          'argsIgnorePattern': '^_'
-        }
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+        },
       ],
       // Дополнительные полезные правила
-       '@typescript-eslint/no-explicit-any': 'warn',
-       'prefer-const': 'error',
-       'no-var': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
     },
   },
 ])

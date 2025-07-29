@@ -1,14 +1,14 @@
-import { Link, useLocation } from "react-router-dom"
-import { Menu, X } from "lucide-react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ModeToggle } from "@/components/mode-toggle"
-import { cn } from "@/lib/utils"
-import logoSrc from "@/assets/logo.svg"
+import { Link, useLocation } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { ModeToggle } from '@/components/mode-toggle'
+import { cn } from '@/lib/utils'
+import logoSrc from '@/assets/logo.svg'
 
 const navigation = [
-  { name: "About", href: "/about" },
-  { name: "Users", href: "/users" },
+  { name: 'About', href: '/about' },
+  { name: 'Users', href: '/users' },
 ]
 
 export function Navbar() {
@@ -21,7 +21,10 @@ export function Navbar() {
 
   return (
     <header className="bg-background border-b">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
         <div className="flex me-12">
           <Link to="/about" className="-m-1.5 p-1.5">
             <img src={logoSrc} alt="Users App" className="h-12 w-12" />
@@ -38,15 +41,13 @@ export function Navbar() {
           </Button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12 me-auto">
-          {navigation.map((item) => (
+          {navigation.map(item => (
             <Link
               key={item.name}
               to={item.href}
               className={cn(
-                "text-lg font-bold transition-colors hover:text-primary",
-                isActive(item.href)
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                'text-lg font-bold transition-colors hover:text-primary',
+                isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
               )}
             >
               {item.name}
@@ -78,15 +79,15 @@ export function Navbar() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-border">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {navigation.map(item => (
                     <Link
                       key={item.name}
                       to={item.href}
                       className={cn(
-                        "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-colors hover:bg-muted",
+                        '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-colors hover:bg-muted',
                         isActive(item.href)
-                          ? "text-primary bg-muted"
-                          : "text-muted-foreground"
+                          ? 'text-primary bg-muted'
+                          : 'text-muted-foreground'
                       )}
                       onClick={() => setMobileMenuOpen(false)}
                     >
