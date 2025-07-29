@@ -25,8 +25,8 @@ This project includes a comprehensive ESLint setup that automatically detects an
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- npm (v9 or higher)
+- Node.js (v20.19.0 or higher)
+- npm (v10.8.2 or higher)
 
 ### Installation Steps
 
