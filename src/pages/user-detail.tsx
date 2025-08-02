@@ -56,7 +56,7 @@ function UserDetailSkeleton() {
   )
 }
 
-export function UserDetail() {
+export default function UserDetail() {
   const { id } = useParams<{ id: string }>()
   const userId = id ? parseInt(id, 10) : 0
 

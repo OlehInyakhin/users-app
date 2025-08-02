@@ -1,4 +1,4 @@
-export function About() {
+export default function About() {
   return (
     <div className="space-y-6">
       <div className="text-center">

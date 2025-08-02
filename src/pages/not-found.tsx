@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Home, Users } from 'lucide-react'
 
-export function NotFound() {
+export default function NotFound() {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
       <div className="space-y-6">

@@ -3,7 +3,7 @@ import { UserFilter } from '@/features/users/user-filter'
 import { UserList } from '@/features/users/user-list'
 import { useFilteredUsers } from '@/hooks/use-users'
 
-export function Users() {
+export default function Users() {
   const [searchTerm, setSearchTerm] = useState('')
   const { data: users, isLoading, error } = useFilteredUsers(searchTerm)
 
