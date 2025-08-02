@@ -8,13 +8,13 @@ export function Users() {
   const { data: users, isLoading, error } = useFilteredUsers(searchTerm)
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div className="space-y-8">
+      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-foreground">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-1">
             Users
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-lg md:text-xl text-muted-foreground">
             Browse and search through user profiles
           </p>
         </div>

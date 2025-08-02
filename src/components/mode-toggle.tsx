@@ -16,7 +16,7 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className="dark:text-black"
+          className="dark:bg-black"
           variant="outline"
           size="icon"
           aria-label="Toggle theme"

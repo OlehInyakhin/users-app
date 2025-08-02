@@ -127,7 +127,7 @@ export function UserDetail() {
         </Button>
       </div>
 
-      <h1 className="text-3xl font-bold tracking-tight text-foreground">
+      <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
         {user.name}
       </h1>
 
@@ -159,8 +159,8 @@ export function UserDetail() {
                 <p className="text-base">@{user.username}</p>
               </div>
 
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-muted-foreground" />
+              <div className="flex gap-2">
+                <Mail className="h-4 w-4 mt-1 text-muted-foreground" />
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">
                     Email
@@ -174,8 +174,8 @@ export function UserDetail() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-muted-foreground" />
+              <div className="flex gap-2">
+                <Phone className="h-4 w-4 mt-1 text-muted-foreground" />
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">
                     Phone
@@ -189,8 +189,8 @@ export function UserDetail() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2">
-                <Globe className="h-4 w-4 text-muted-foreground" />
+              <div className="flex gap-2">
+                <Globe className="h-4 w-4 mt-1 text-muted-foreground" />
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">
                     Website
